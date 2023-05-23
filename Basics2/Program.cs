@@ -60,6 +60,42 @@ namespace Basics2
 
                 Console.WriteLine("Your color is cyan!");
             }
+            /////////////////////////////////////////////
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+
+            var Color = Console.ReadLine();
+
+            switch (Color)
+            {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is red!");
+                    break;
+
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is green!");
+                    break;
+                case "cyan":
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is Cyan!");
+                    break;
+
+                default:
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Your color is Yellow!");
+                    break;
+            }
+            Console.ReadLine();
         }
     }
 }
+
