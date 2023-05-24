@@ -38,11 +38,11 @@ namespace Basics2
             /////////////////////////////////////////////
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            var Color = Console.ReadLine();
+            var text = Console.ReadLine();
             int t = 3;
             do
             {
-                switch (Color)
+                switch (text)
                 {
                     case "red":
                         Console.BackgroundColor = ConsoleColor.Red;
@@ -64,15 +64,15 @@ namespace Basics2
                         Console.WriteLine("Your color is Cyan!");
                         break;
 
-                    default:
+                    case "yellow":
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Black;
 
                         Console.WriteLine("Your color is Yellow!");
                         break;
+                    case "stop": t = 0; break;
+                    default: continue;
                 }
-                var Text = Console.ReadLine();
-                if (Text == "stop") break;
                 t--;
             }
             while (t > 0);
@@ -80,4 +80,3 @@ namespace Basics2
         }
     }
 }
-
