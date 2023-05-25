@@ -83,10 +83,31 @@ namespace Basics2
             {
                 Console.Write(i + " ");
             }
-            Console.WriteLine();
+
             for (int i = Name.Length; i != 0; i--)
             {
                 Console.Write(" " + Name[i - 1]);
+            }
+            Console.WriteLine();
+
+            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+            foreach (var item in array)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.Write("\nКоличество строк: ");
+            Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
+            Console.Write("Количество колонок: ");
+            Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
+
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
+            {
+                for (int k = 0; k < array.GetUpperBound(1) + 1; k++)
+                {
+                    Console.Write(array[i, k] + " ");
+                }
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
