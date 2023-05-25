@@ -36,52 +36,57 @@ namespace Basics2
             //    Console.WriteLine("Условие ложно");
             //}
             /////////////////////////////////////////////
-            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            //Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            var text = Console.ReadLine();
-            int t = 3;
-            do
-            {
-                switch (text)
-                {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
+            //var text = Console.ReadLine();
+            //int t = 3;
+            //do
+            //{
+            //    switch (text)
+            //    {
+            //        case "red":
+            //            Console.BackgroundColor = ConsoleColor.Red;
+            //            Console.ForegroundColor = ConsoleColor.Black;
 
-                        Console.WriteLine("Your color is red!");
-                        break;
+            //            Console.WriteLine("Your color is red!");
+            //            break;
 
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
+            //        case "green":
+            //            Console.BackgroundColor = ConsoleColor.Green;
+            //            Console.ForegroundColor = ConsoleColor.Black;
 
-                        Console.WriteLine("Your color is green!");
-                        break;
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
+            //            Console.WriteLine("Your color is green!");
+            //            break;
+            //        case "cyan":
+            //            Console.BackgroundColor = ConsoleColor.Cyan;
+            //            Console.ForegroundColor = ConsoleColor.Black;
 
-                        Console.WriteLine("Your color is Cyan!");
-                        break;
+            //            Console.WriteLine("Your color is Cyan!");
+            //            break;
 
-                    case "yellow":
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Black;
+            //        case "yellow":
+            //            Console.BackgroundColor = ConsoleColor.Yellow;
+            //            Console.ForegroundColor = ConsoleColor.Black;
 
-                        Console.WriteLine("Your color is Yellow!");
-                        break;
-                    case "stop": t = 0; break;
-                    default: continue;
-                }
-                t--;
-            }
-            while (t > 0);
+            //            Console.WriteLine("Your color is Yellow!");
+            //            break;
+            //        case "stop": t = 0; break;
+            //        default: continue;
+            //    }
+            //    t--;
+            //}
+            //while (t > 0);
             ///////////////////////////////////////////
             Console.WriteLine("Введите имя:");
             string Name = Console.ReadLine();
-            foreach( var i in Name)
+            foreach (var i in Name)
             {
-                Console.Write(i+" ");
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+            for (int i = Name.Length; i != 0; i--)
+            {
+                Console.Write(" " + Name[i - 1]);
             }
             Console.ReadLine();
         }
