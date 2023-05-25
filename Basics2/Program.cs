@@ -10,31 +10,31 @@ namespace Basics2
     {
         static void Main(string[] args)
         {
-            string A = "Привет!";
-            string B = "Пока!";
-            bool C = A != B;
-            Console.WriteLine(C);
-            /////////////////////////////
-            int a = 4, b = 3;
-            double x = 7, y = 5;
-            bool c = (a < b) || (x > y);
-            Console.WriteLine(c);
-            ////////////////////////////
-            var inv = true;
-            var result = !inv;
-            Console.WriteLine(result);
-            ////////////////////////////
-            var f = 6;
-            var g = 7;
+            //string A = "Привет!";
+            //string B = "Пока!";
+            //bool C = A != B;
+            //Console.WriteLine(C);
+            ///////////////////////////////
+            //int a = 4, b = 3;
+            //double x = 7, y = 5;
+            //bool c = (a < b) || (x > y);
+            //Console.WriteLine(c);
+            //////////////////////////////
+            //var inv = true;
+            //var result = !inv;
+            //Console.WriteLine(result);
+            //////////////////////////////
+            //var f = 6;
+            //var g = 7;
 
-            if (f != g)
-            {
-                Console.WriteLine("Условие истинно");
-            }
-            else
-            {
-                Console.WriteLine("Условие ложно");
-            }
+            //if (f != g)
+            //{
+            //    Console.WriteLine("Условие истинно");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Условие ложно");
+            //}
             /////////////////////////////////////////////
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
@@ -76,6 +76,13 @@ namespace Basics2
                 t--;
             }
             while (t > 0);
+            ///////////////////////////////////////////
+            Console.WriteLine("Введите имя:");
+            string Name = Console.ReadLine();
+            foreach( var i in Name)
+            {
+                Console.Write(i+" ");
+            }
             Console.ReadLine();
         }
     }
