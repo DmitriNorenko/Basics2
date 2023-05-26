@@ -192,9 +192,13 @@ namespace Basics2
                     }
                 }
             }
-            foreach (int i in arr)
+           for( int i =0;i<arr.GetUpperBound(0) + 1; i++)
             {
-                Console.Write(i + " ");
+                for(int k = 0;k<arr.GetUpperBound(1) +1;k++)
+                {
+                    Console.Write(arr[i,k]+" ");
+                }
+                Console.WriteLine();
             }
             Console.ReadLine();
         }
