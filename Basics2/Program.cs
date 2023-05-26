@@ -110,24 +110,32 @@ namespace Basics2
             //    Console.WriteLine();
             //}
             ////////////////////////////////Задание 4.3.12
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-            int c = 0;
-            for (int k = 0; k < arr.Length; k++)
+            //var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            //int c = 0;
+            //for (int k = 0; k < arr.Length; k++)
+            //{
+            //    for (int i = 0; i < arr.Length; i++)
+            //    {
+            //        if (arr[k] < arr[i])
+            //        {
+            //            c = arr[i];
+            //            arr[i] = arr[k];
+            //            arr[k] = c;
+            //        }
+            //    }
+            //}
+            //foreach (var n in arr)
+            //{
+            //    Console.Write(n+" ");
+            //}
+            ///////////////////////////Задание 4.3.13
+            var sumArray = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int sum = 0;
+            for(int i = 0; i < sumArray.Length; i++)
             {
-                for (int i = 0; i < arr.Length; i++)
-                {
-                    if (arr[k] < arr[i])
-                    {
-                        c = arr[i];
-                        arr[i] = arr[k];
-                        arr[k] = c;
-                    }
-                }
+                sum += sumArray[i];
             }
-            foreach (var n in arr)
-            {
-                Console.Write(n+" ");
-            }
+            Console.WriteLine(sum);
             Console.ReadLine();
         }
     }
