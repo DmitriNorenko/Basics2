@@ -150,14 +150,30 @@ namespace Basics2
             //Console.WriteLine();
             //}
             //////////////////////////Задание 4.3.15
-            var array3 = new int[] { 1, -13, 3, -7, -19, -7, 6, 14, -67 };
-            for(int i = 0; i < array3.Length; i++)
+            //var array3 = new int[] { 1, -13, 3, -7, -19, -7, 6, 14, -67 };
+            //int count = 0;
+            //for (int i = 0; i < array3.Length; i++)
+            //{
+            //    if (array3[i] >= 0)
+            //    {
+            //        count++;
+            //    }
+            //}
+            //Console.WriteLine(count);
+            //////////////////////////////Задание 4.3.16
+            int[,] array4 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            int count = 0;
+            for (int i = 0; i < array4.GetUpperBound(0) + 1; i++)
             {
-                if (array3[i] >= 0)
+                for (int k = 0; k < array4.GetUpperBound(1) + 1; k++)
                 {
-                    Console.Write(array3[i]+" ");
-                }            
+                    if (array4[i,k] >= 0)
+                    {
+                        count++;
+                    }
+                }
             }
+            Console.WriteLine(count);
             Console.ReadLine();
         }
     }
