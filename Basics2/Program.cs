@@ -129,13 +129,26 @@ namespace Basics2
             //    Console.Write(n+" ");
             //}
             ///////////////////////////Задание 4.3.13
-            var sumArray = new int[] { 5, 6, 9, 1, 2, 3, 4 };
-            int sum = 0;
-            for(int i = 0; i < sumArray.Length; i++)
-            {
-                sum += sumArray[i];
-            }
-            Console.WriteLine(sum);
+            //var sumArray = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            //int sum = 0;
+            //for(int i = 0; i < sumArray.Length; i++)
+            //{
+            //    sum += sumArray[i];
+            //}
+            //Console.WriteLine(sum);
+            //////////////////////////Задание 4.3.14
+            //var array = new int[3][];
+            //array[0] = new int[2] { 1, 2 };
+            //array[1] = new int[3] { 1, 2, 3 };
+            //array[2] = new int[5] { 1, 2, 3, 4, 5 };
+            //foreach (var item in array)
+            //{
+            //foreach ( var item2 in item)
+            //    {
+            //        Console.Write(item2 + " ");
+            //    }
+            //Console.WriteLine();
+            //}
             Console.ReadLine();
         }
     }
