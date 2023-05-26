@@ -177,13 +177,13 @@ namespace Basics2
             ////////////////////////////Задание 4.3.17
             int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             int c = 0;
-            for (int i = 0; i < arr.GetUpperBound(0); i++)
+            for (int i = 0; i < arr.GetUpperBound(0) + 1; i++)
             {
-                for (int j = 1; j < arr.GetUpperBound(1); j++)
+                for (int j = 1; j < arr.GetUpperBound(1) + 1; j++)
                 {
-                    for (int k = 0; k < arr.GetUpperBound(1); k++)
+                    for (int k = 0; k < arr.GetUpperBound(1) + 1; k++)
                     {
-                        if (arr[i, k] < arr[i, j])
+                        if (arr[i, k] > arr[i, j])
                         {
                             c = arr[i, j];
                             arr[i, j] = arr[i, k];
