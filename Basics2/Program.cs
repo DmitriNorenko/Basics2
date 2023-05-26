@@ -149,6 +149,15 @@ namespace Basics2
             //    }
             //Console.WriteLine();
             //}
+            //////////////////////////Задание 4.3.15
+            var array3 = new int[] { 1, -13, 3, -7, -19, -7, 6, 14, -67 };
+            for(int i = 0; i < array3.Length; i++)
+            {
+                if (array3[i] >= 0)
+                {
+                    Console.Write(array3[i]+" ");
+                }            
+            }
             Console.ReadLine();
         }
     }
