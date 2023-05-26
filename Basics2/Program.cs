@@ -161,19 +161,41 @@ namespace Basics2
             //}
             //Console.WriteLine(count);
             //////////////////////////////Задание 4.3.16
-            int[,] array4 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
-            int count = 0;
-            for (int i = 0; i < array4.GetUpperBound(0) + 1; i++)
+            //int[,] array4 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            //int count = 0;
+            //for (int i = 0; i < array4.GetUpperBound(0) + 1; i++)
+            //{
+            //    for (int k = 0; k < array4.GetUpperBound(1) + 1; k++)
+            //    {
+            //        if (array4[i,k] >= 0)
+            //        {
+            //            count++;
+            //        }
+            //    }
+            //}
+            //Console.WriteLine(count);
+            ////////////////////////////Задание 4.3.17
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            int c = 0;
+            for (int i = 0; i < arr.GetUpperBound(0); i++)
             {
-                for (int k = 0; k < array4.GetUpperBound(1) + 1; k++)
+                for (int j = 1; j < arr.GetUpperBound(1); j++)
                 {
-                    if (array4[i,k] >= 0)
+                    for (int k = 0; k < arr.GetUpperBound(1); k++)
                     {
-                        count++;
+                        if (arr[i, k] < arr[i, j])
+                        {
+                            c = arr[i, j];
+                            arr[i, j] = arr[i, k];
+                            arr[i, k] = c;
+                        }
                     }
                 }
             }
-            Console.WriteLine(count);
+            foreach (int i in arr)
+            {
+                Console.Write(i + " ");
+            }
             Console.ReadLine();
         }
     }
