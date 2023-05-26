@@ -76,38 +76,57 @@ namespace Basics2
             //    t--;
             //}
             //while (t > 0);
-            ///////////////////////////////////////////
-            Console.WriteLine("Введите имя:");
-            string Name = Console.ReadLine();
-            foreach (var i in Name)
-            {
-                Console.Write(i + " ");
-            }
+            ///////////////////////////////////////////Задание 4.3.11
+            //Console.WriteLine("Введите имя:");
+            //string Name = Console.ReadLine();
+            //foreach (var i in Name)
+            //{
+            //    Console.Write(i + " ");
+            //}
 
-            for (int i = Name.Length; i != 0; i--)
-            {
-                Console.Write(" " + Name[i - 1]);
-            }
-            Console.WriteLine();
+            //for (int i = Name.Length; i != 0; i--)
+            //{
+            //    Console.Write(" " + Name[i - 1]);
+            //}
+            //Console.WriteLine();
 
-            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
-            foreach (var item in array)
-            {
-                Console.Write(item + " ");
-            }
+            //int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+            //foreach (var item in array)
+            //{
+            //    Console.Write(item + " ");
+            //}
 
-            Console.Write("\nКоличество строк: ");
-            Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
-            Console.Write("Количество колонок: ");
-            Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
+            //Console.Write("\nКоличество строк: ");
+            //Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
+            //Console.Write("Количество колонок: ");
+            //Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
 
-            for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+            //for (int i = 0; i < array.GetUpperBound(1) + 1; i++)
+            //{
+            //    for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
+            //    {
+            //        Console.Write(array[k, i] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            ////////////////////////////////Задание 4.3.12
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            int c = 0;
+            for (int k = 0; k < arr.Length; k++)
             {
-                for (int k = 0; k < array.GetUpperBound(0) + 1; k++)
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    Console.Write(array[k, i] + " ");
+                    if (arr[k] < arr[i])
+                    {
+                        c = arr[i];
+                        arr[i] = arr[k];
+                        arr[k] = c;
+                    }
                 }
-                Console.WriteLine();
+            }
+            foreach (var n in arr)
+            {
+                Console.Write(n+" ");
             }
             Console.ReadLine();
         }
