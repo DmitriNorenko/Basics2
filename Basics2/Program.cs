@@ -175,31 +175,41 @@ namespace Basics2
             //}
             //Console.WriteLine(count);
             ////////////////////////////Задание 4.3.17
-            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
-            int c = 0;
-            for (int i = 0; i < arr.GetUpperBound(0) + 1; i++)
-            {
-                for (int j = 1; j < arr.GetUpperBound(1) + 1; j++)
-                {
-                    for (int k = 0; k < arr.GetUpperBound(1) + 1; k++)
-                    {
-                        if (arr[i, k] > arr[i, j])
-                        {
-                            c = arr[i, j];
-                            arr[i, j] = arr[i, k];
-                            arr[i, k] = c;
-                        }
-                    }
-                }
-            }
-           for( int i =0;i<arr.GetUpperBound(0) + 1; i++)
-            {
-                for(int k = 0;k<arr.GetUpperBound(1) +1;k++)
-                {
-                    Console.Write(arr[i,k]+" ");
-                }
-                Console.WriteLine();
-            }
+            // int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            // int c = 0;
+            // for (int i = 0; i < arr.GetUpperBound(0) + 1; i++)
+            // {
+            //     for (int j = 1; j < arr.GetUpperBound(1) + 1; j++)
+            //     {
+            //         for (int k = 0; k < arr.GetUpperBound(1) + 1; k++)
+            //         {
+            //             if (arr[i, k] > arr[i, j])
+            //             {
+            //                 c = arr[i, j];
+            //                 arr[i, j] = arr[i, k];
+            //                 arr[i, k] = c;
+            //             }
+            //         }
+            //     }
+            // }
+            //for( int i =0;i<arr.GetUpperBound(0) + 1; i++)
+            // {
+            //     for(int k = 0;k<arr.GetUpperBound(1) +1;k++)
+            //     {
+            //         Console.Write(arr[i,k]+" ");
+            //     }
+            //     Console.WriteLine();
+            // }
+            ////////////////////////////Задание 4.4.5
+            (string Name, string Type, double Age, int NameCount) Pet;
+            Console.WriteLine("Введите имя питомца: ");
+            Pet.Name = Console.ReadLine();
+            Console.WriteLine("Введите тип питомца: ");
+            Pet.Type = Console.ReadLine();
+            Console.WriteLine("Введите возраст питомца: ");
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+            Pet.NameCount = Pet.Name.Length;
+            Console.WriteLine("В имени вашего питомца :{0} букв", Pet.NameCount);
             Console.ReadLine();
         }
     }
